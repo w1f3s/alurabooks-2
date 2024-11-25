@@ -1,9 +1,9 @@
-@import url("Styles/header.css");
-@import url("Styles/banner.css");
-@import url("Styles/carrossel.css");
-@import url("Styles/topicos.css");
-@import url("Styles/contato.css");
-@import url("Styles/rodape.css");
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodape.css");
 /*Amanda Bispo 3D 18/11/2024*/
 :root {
     --fundo: #EBECEE;
