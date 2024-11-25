@@ -1,66 +1,174 @@
-/* Amanda Bispo 3°D  18/11/2024 */
-
-.contato {
-    background-color: var(--branco);
-    padding: 1em;
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 2em;
+}
+/*Amanda Bispo 3°D 18/11/2024*/
+.container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer {
+    background-image: url(../img//MenuAberto.png);
 }
 
-.contato__titulo,
-.contato__texto {
+.container__botao:checked~.container__rotulo {
+    background: var(--azul-degrade);
+    padding: 1.3em .3em;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+/*Amanda Bispo 3°D 18/11/2024*/
+.pt1 {
+    gap: 1em;
+}
+
+.container__imagem {
+    padding: 0.5em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    border-radius: 0 0 20px 20px;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+/*Amanda Bispo 3°D 18/11/2024*/
+.container__botao {
+    display: none;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.lista-menu__link {
     background: var(--azul-degrade);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-transform: uppercase;
 }
 
-.contato__titulo {
-    font-size: 18px;
-    font-weight: 500;
+.container__titulo,
+.opções {
+    display: none;
 }
-
-.contato__texto {
-    font-weight: 300;
-    margin: 1em 0;
-}
-
-.contato__email {
-    padding: 1em;
-    border: 1px solid var(--azul);
-    border-radius: 24px;
-    width: 90%;
-    color: var(--azul);
-}
-
-.contato__email::placeholder {
-    font-family: var(--fonte-principal);
-    color: var(--azul);
-    background: url("../img/Email.svg") no-repeat 5%;
-    padding-left: 2em;
+/*Amanda Bispo 3°D 18/11/2024*/
+.container__texto {
+    display: none
 }
 
 @media screen and (min-width: 1024px) {
-    .contato {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+        font-weight: bold;
+    }
+
+    .opções {
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
-    .contato__titulo {
-        font-size: 24px;
+    .opções__item {
+        padding: 0 1em;
+        text-transform: uppercase;
     }
 
-    .contato__descrição {
-        margin-right: 1em;
-        width: 30%;
+    .opções__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+/*Amanda Bispo 3°D 18/11/2024*/
+    .opções__link:hover {
+        background: var(--azul-degrade);
+        color: var(--branco);
+        padding: 2em 1em;
     }
 
-    .contato__email {
-        width: 30%;
+    .container__imagem-transparente,
+    .cabecalho__menu-hamburguer,
+    .opções__botão {
+        display: none;
+    }
+
+    .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opções__botão:checked~.opcoes__rotulo>.opções__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opções__item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+/*Amanda Bispo 3°D 18/11/2024*/
+    .lista-menu__item:hover>.lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
     }
 }
 
 @media screen and (min-width: 1728px) {
-    .contato {
-        padding: 3em 20vw;
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__texto {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+/*Amanda Bispo 3°D 18/11/2024*/
+    .opções {
+        margin-right: auto;
     }
 }
