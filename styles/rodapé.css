@@ -1,9 +1,7 @@
-/* Amanda Bispo 3°D  18/11/2024 */
-
 hr {
     margin: 0;
 }
-
+/*Amanda Bispo 3°D 18/11/2024*/
 .rodapé {
     background-color: var(--branco);
     padding: 1em;
@@ -13,42 +11,47 @@ hr {
     display: none;
 }
 
-
 @media screen and (min-width: 1024px) {
-    .rodapé {
-        display: flex;
-        justify-content: space-around;
-    }
 
     .lista-rodapé {
         display: block;
     }
 
+    .rodapé {
+        display: flex;
+        justify-content: space-around;
+    }
+/*Amanda Bispo 3°D 18/11/2024*/
     .lista-rodapé__item {
         display: flex;
         align-items: center;
-        margin: 0.6em 0;
+        margin: 0.6em;
     }
 
     .lista-rodapé__link {
         color: var(--cinza);
         text-decoration: none;
-        margin-left: 0.6em;
+        margin-left: .6em;
     }
 
-    .lista-rodapé__titulo {
+    .lista-rodapé_titulo {
         font-size: 14px;
         color: var(--cinza-claro);
     }
 
-    .rodapé__titulo {
+    .rodapé_titulo {
         font-size: 24px;
     }
 }
-
+/*Amanda Bispo 3°D 18/11/2024*/
 @media screen and (min-width: 1728px) {
+
     .lista-rodapé {
         border-left: 1px solid var(--cinza-claro);
         padding-left: 1em;
+    }
+
+    .rodapé {
+        padding: 3em 0;
     }
 }
