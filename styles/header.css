@@ -9,7 +9,7 @@
 }
 /*Amanda Bispo 3°D 18/11/2024*/
 .container__botao:checked~.container__rotulo>.cabecalho__menu-hamburguer {
-    background-image: url(../img//MenuAberto.png);
+    background-image: url(../img//MenuAberto.svg);
 }
 
 .container__botao:checked~.container__rotulo {
